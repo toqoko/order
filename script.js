@@ -30,16 +30,24 @@ document.getElementById("orderForm").addEventListener("submit", function (event)
 
     var orderContent = `
 	  <p><strong>Название товара:</strong> ${productName}</p>
-	  <p><strong>Цена:</strong> ${price}</p>
+	  <p><strong>Цена:</strong> ${price}₽</p>
 	  <p><strong>Срок (в днях):</strong> ${deadline}</p>
-	  <p><strong>Описание:</strong> ${description}</p>
 	  <p><strong>Контакт для свзязи:</strong> ${dataNumber}</p>
+	  <p><strong>Описание:</strong> ${description}</p>
 	  <button onclick="changeStatus(this)" class="statusIcon bell">🔔</button>
 	  <button onclick="deleteOrder(this)" class="deleteButton">Удалить заказ</button>
 	`;
 
     newOrder.innerHTML = orderContent;
     document.getElementById("ordersList").appendChild(newOrder);
+
+	event.target.reset(); 
+
+	var successMessage = document.getElementById("successMessage");
+	successMessage.classList.add("show");
+	setTimeout(function() {
+		successMessage.classList.remove("show");
+	}, 1000); 
 });
 
 
