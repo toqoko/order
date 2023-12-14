@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Управление заказами</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="..." crossorigin="anonymous">
 		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
@@ -26,12 +27,16 @@
 					<label for="description">Описание:</label><br>
 					<textarea id="description" name="description" rows="4" cols="50"></textarea>
 					<br><br>
-					<button type="submit">Создать заказ</button>
+					
+					<button type="submit" id="create_order">Создать заказ</button>
 				</form>
 				<div id="successMessage" class="hidden">Заказ успешно создан!</div>
 			</div>
 			<div id="viewOrders" class="tabcontent">
 				<h2>Просмотреть заказы</h2>
+				<h3><i id="loadingIcon" class="fas fa-spinner fa-spin loading-icon"></i></h3>
+				
+				
 				<div id="ordersList">
 					<!-- Здесь будут отображаться заказы -->
 				</div>
