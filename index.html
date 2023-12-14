@@ -16,18 +16,19 @@
 				<form id="orderForm">
 					<!-- Форма для создания заказа -->
 					<label for="productName">Название заказа:</label>
-					<input type="text" id="productName" name="productName"><br><br>
+					<input type="text" id="productName" name="productName" required="required"><br><br>
 					<label for="price">Цена:</label>
-					<input type="number" id="price" name="price" min="0"><br><br>
+					<input type="number" id="price" name="price" min="0" required="required"><br><br>
 					<label for="deadline">Срок (в днях):</label>
-					<input type="number" id="deadline" name="deadline" min="0"><br><br>
+					<input type="number" id="deadline" name="deadline" min="0" required="required"><br><br>
 					<label for="dataNumber">Контакт для свзязи:</label>
-					<input type="text" id="dataNumber" name="dataNumber"><br><br>
+					<input type="text" id="dataNumber" name="dataNumber" required="required"><br><br>
 					<label for="description">Описание:</label><br>
 					<textarea id="description" name="description" rows="4" cols="50"></textarea>
 					<br><br>
 					<button type="submit">Создать заказ</button>
 				</form>
+				<div id="successMessage" class="hidden">Заказ успешно создан!</div>
 			</div>
 			<div id="viewOrders" class="tabcontent">
 				<h2>Просмотреть заказы</h2>
