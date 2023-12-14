@@ -38,7 +38,15 @@ body {
 }
 
 .tabcontent h2 {
+	text-align: center;
 	margin-top: 0;
+}
+
+.tabcontent h3 {
+	text-align: center;
+	margin-top: 0;
+	font-size: 50px;
+	color: grey;
 }
 
 /* Стили для формы */
@@ -105,6 +113,7 @@ select {
 }
 
 button[type="submit"] {
+	width: 30%;
 	background-color: #4CAF50;
 	color: white;
 	padding: 10px 20px;
